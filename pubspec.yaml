@@ -1,0 +1,61 @@
+name: koinonia
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.24.0
+  cloud_firestore: ^4.13.0
+  shared_preferences: ^2.2.2  
+  google_fonts: ^6.2.0
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  fl_chart: ^1.0.0
+  pdf: ^3.10.4
+  printing: ^5.11.0
+  path_provider: ^2.1.1
+  firebase_auth: 4.16.0
+  dart_rss: ^3.0.3
+  http: ^1.1.5
+  url_launcher: ^6.1.7
+  intl: ^0.19.0
+  html: ^0.15.4
+  flutter_image_compress: 2.3.0
+  image_picker: ^1.0.4
+  firebase_storage: 11.6.5
+  uuid: ^3.0.7
+  image: ^4.0.17
+  lottie: ^2.7.0
+  crypto: ^3.0.3
+  animated_text_kit: ^4.2.2
+  async: ^2.11.0
+  shimmer: ^3.0.0
+  flutter_svg: ^2.0.7
+  animate_do: ^4.2.0
+  csv: ^5.0.1 
+  share_plus: ^7.0.0
+  tutorial_coach_mark: ^1.2.3
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/404_katolik.png
+    - assets/images/login_logo.png

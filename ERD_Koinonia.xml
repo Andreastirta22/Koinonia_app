@@ -1,0 +1,123 @@
+# Membuat XML lengkap (versi teks) untuk ERD Koinonia full sesuai relasi final
+erd_full_xml = """<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="ERD Koinonia Lengkap" id="ERD1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1"
+     connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ENTITAS DAN ATRIBUT -->
+        <!-- Users -->
+        <mxCell id="Users" value="Users" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Users_attr" value="uid (PK), username, password, nama, role, jenis_kelamin, gaptek, lingkungan_id"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="60" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Users_attr" target="Users" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Absensi -->
+        <mxCell id="Absensi" value="Absensi" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="Absensi_attr" value="absensi_id (PK), user_id (FK), tanggal, hadir"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="300" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Absensi_attr" target="Absensi" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- OTP Absensi -->
+        <mxCell id="OTP" value="OTP_Absensi" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="OTP_attr" value="kode (PK), tanggal, dibuat_oleh (FK)"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="260" width="260" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="OTP_attr" target="OTP" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Keuangan -->
+        <mxCell id="Keuangan" value="Keuangan" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="Keuangan_attr" value="id (PK), tanggal, jenis, nominal, keterangan, dibuat_oleh (FK)"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="320" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Keuangan_attr" target="Keuangan" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Berita -->
+        <mxCell id="Berita" value="Berita_Kegiatan" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="460" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="Berita_attr" value="id (PK), judul, isi, tanggal_mulai, tanggal_akhir, status, dibuat_oleh (FK)"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="460" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Berita_attr" target="Berita" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Sumbangan -->
+        <mxCell id="Sumbangan" value="Sumbangan_Barang" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="560" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="Sumbangan_attr" value="id (PK), user_id (FK), berita_id (FK), jenis_barang, jumlah, satuan"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Sumbangan_attr" target="Sumbangan" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Penjualan -->
+        <mxCell id="Penjualan" value="Hasil_Penjualan" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="660" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="Penjualan_attr" value="berita_id (PK/FK), total_pemasukan"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="660" width="240" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Penjualan_attr" target="Penjualan" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Trivia -->
+        <mxCell id="Trivia" value="Trivia" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="60" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="Trivia_attr" value="id (PK), pertanyaan, jawaban, dibuat_oleh (FK)"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="60" width="240" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Trivia_attr" target="Trivia" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Notifikasi -->
+        <mxCell id="Notifikasi" value="Notifikasi" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="Notifikasi_attr" value="id (PK), user_id (FK), tipe, terkait_id, status_baca, timestamp"
+         style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="160" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell edge="1" source="Notifikasi_attr" target="Notifikasi" style="endArrow=none;" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

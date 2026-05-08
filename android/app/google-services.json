@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159767365646",
+    "project_id": "koinonia-90a79",
+    "storage_bucket": "koinonia-90a79.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159767365646:android:63dfc02e193b25809ad45f",
+        "android_client_info": {
+          "package_name": "com.example.koinonia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvdpb0TLHr5uEhZKHUZx2XZ507ByXQJt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
