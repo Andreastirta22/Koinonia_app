@@ -91,7 +91,7 @@ flutter --version
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/koinonia.git
+git clone https://github.com/Andreastirta22/Koinonia_app.git
 ```
 
 2. Navigate to the project folder
